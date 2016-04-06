@@ -67,6 +67,7 @@ $().ready(function() {
                 dataType: 'json', // what type of data do we expect back from the server
                 encode: true,
                 success: function(data) {
+					console.log(data);
                     if(data==null)
                         alert("No results found");
                     else{
