@@ -1,5 +1,5 @@
 <?php
-//header('Access-Control-Allow-Origin: http://cs-server.usc.edu:52629');
+header('Access-Control-Allow-Origin: http://soumyaravi.github.io/');
     $street = test_input($_GET['street']);
     $city = test_input($_GET['city']);
     $state = test_input($_GET['states']);

@@ -62,7 +62,7 @@ $().ready(function() {
             };
             $.ajax({
                 type: "GET",
-                url: "index.php",
+                url: "http://soumyaravi.github.io/WeatherForecast/index.php",
                 data: formData, // serializes the form's elements.
                 dataType: 'json', // what type of data do we expect back from the server
                 encode: true,
