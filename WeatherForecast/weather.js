@@ -285,7 +285,7 @@ function postToFb() {
         link: 'https://forecast.io/',
         picture: fbimg,
         description: fbsum + ', ' + fbtemp + '&deg;' + fbdeg,
-        caption: 'WEATHER INFORMATION FROM FORECAST.IO',
+        caption: 'WEATHER INFORMATION FROM FORECAST.IO'
     }, function(response) {
         if (response == null)
             alert('Not Posted');
