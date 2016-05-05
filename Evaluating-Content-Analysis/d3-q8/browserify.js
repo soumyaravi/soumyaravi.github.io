@@ -3,7 +3,7 @@ var width =960,
 var fill = d3.scale.category20();
 
 d3.csv("count_words.csv", function(data){
-	console.log("in");
+	
 	var metadata = data
 	.filter(function (d){ return +d.count>0 ; })
 	.map(function(d){ return { text: d.language, size :d.count};})
@@ -37,5 +37,5 @@ function draw(words) {
         return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
       })
       .text(function(d) { return d.text; });
-	console.log(words);
+	
 }
