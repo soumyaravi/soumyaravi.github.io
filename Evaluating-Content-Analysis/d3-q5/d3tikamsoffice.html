@@ -65,7 +65,7 @@ d3.select('.tooltip').style('padding',' 10px')
 .style('background',' white')
 .style('border-radius',' 10px')
 .style('box-shadow',' 4px 4px 10px rgba(0, 0, 0, 0.4)');
-d3.csv("filesize_tikamsoffice.csv",  function(data) {
+d3.csv("tikamsoffice.csv",  function(data) {
 
 console.log("in");
   x.domain(data.map(function(d) { d = ++count; return d;}));
@@ -73,7 +73,7 @@ console.log("in");
 console.log(d3.max(d3.values(data)));
   svg.append("g")
       .attr("class", "x axis")
-      .attr("transform", "translate(-6," + height + ")")
+      .attr("transform", "translate(-28," + height + ")")
       .call(xAxis);
 
   svg.append("g")
@@ -91,7 +91,7 @@ count=0;
     .enter().append("rect")
       .attr("class", "bar")
       .attr("x", function(d) { d=++count;return x(d); })
-      .attr("width", 5.5)
+      .attr("width", 10.5)
       .attr("y", function(d) { return y(d.size); })
       .attr("height", function(d) { return height - y(d.size); })
       .on("mouseover", function(d) {
@@ -112,32 +112,7 @@ count=0;
 function type(d) {
   d.size = +d.size;
   return d;
-}/*
-    var QueryString = function () {
-    var query_string = {};
-    var query = window.location.search.substring(1);
-    var vars = query.split("&");
-    for (var i = 0; i < vars.length; i++) {
-        var pair = vars[i].split("=");
-        if (typeof query_string[pair[0]] === "undefined") {
-            query_string[pair[0]] = decodeURIComponent(pair[1]);
-        } else if (typeof query_string[pair[0]] === "string") {
-            var a = [query_string[pair[0]], decodeURIComponent(pair[1])];
-            query_string[pair[0]] = a;
-        } else {
-            query_string[pair[0]].push(decodeURIComponent(pair[1]));
-        }
-    }
-    return query_string;
-}();
-    
-    window.onload = function() {
-
-            var mime =  QueryString.mime;
-            path = "data/" + mime + ".tsv";
-            console.log("PATH: " + path);
-            bfa(path);
-    }*/
+}
 		</script>
 	</body>
 </html>

@@ -1,16 +1,60 @@
 <html>
 <head>
-	<title>Evaluating Content Analysis</title>
-	</head>
-<body>
-	<ol>
+    <Title>Filesize diversity</Title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> 
+    <style>
+        h1{
+            text-align: center;
+        }
+        body{
+            background-color: whitesmoke;
+        }
+        .tabcolor a:link{
+    background-color: #FFFFFF;
+}
+    </style>
+    <script>
+    $().ready(function() {
+            $("#mime").on("change", function(e) {
+
+                var mime = $(this).val(),
+                    url = "/"+mime+".html";
+                $("iframe").attr("src", url);
+                console.log("url"+url);
+                console.log("mime"+mime);
+            });
+         });
+    </script>
+    </head>
+    <body>
+    <div class="container">
+        <h1>Filesize diversity</h1>
+        <label for="type">Choose the visualization:</label>
+        <select id="mime" class="form-control">
+            <option value="d3-q4/classification">Request to Content classification</option>
+            <option value="d3-q5/file_size">File Size Diversity</option>
+            <option value="d3-q6/parser_call">Parser Call CHain</option>
+            <option value="d3-q7/language_diversity">Lnguage Diversity</option>
+            <option value="d3-q8/WordCloud">Word Cloud</option>
+            <option value="d3-q9/NER">Maximal Joint Agreement</option>
+            <option value="d3-q10/Spectrum">Spectrum of Measurements</option>
+        </select>
+        </div>
+        <br>
+        <br>
+        <div class="container" id="data-info">
+          <iframe src="d3msexcel.html" width="100%" height="600">
+			</iframe>
+        </div>
+    </body>
+</html><!--
 	<li><a href = "http://soumyaravi.github.io/Evaluating-Content-Analysis/d3-q4/classification.html">Request to Content classification</a></li>
-		<li><a href = "http://soumyaravi.github.io/Evaluating-Content-Analysis/d3-q8/WordCloud.html">Word Cloud</a></li>
-		<li><a href = "http://soumyaravi.github.io/Evaluating-Content-Analysis/d3-q8/WordCloud.html">Word Cloud</a></li>
+		<li><a href = "http://soumyaravi.github.io/Evaluating-Content-Analysis/d3-q5/file_size.html">File size diversity</a></li>
+		<li><a href = "http://soumyaravi.github.io/Evaluating-Content-Analysis/d3-q6/parser_call.html">Parser Call Chain</a></li>
 		<li><a href = "http://soumyaravi.github.io/Evaluating-Content-Analysis/d3-q7/language_diversity.html">Language Diversity</a></li>
 		<li><a href = "http://soumyaravi.github.io/Evaluating-Content-Analysis/d3-q8/WordCloud.html">Word Cloud</a></li>
 		<li><a href = "http://soumyaravi.github.io/Evaluating-Content-Analysis/d3-q9/NER.html">Maximal Joint Agreement</a></li>
 		<li><a href = "http://soumyaravi.github.io/Evaluating-Content-Analysis/d3-q10/Spectrum.html">Spectrum of Measurements</a></li>
-	</ol>
-	</body>
-</html>
+-->
