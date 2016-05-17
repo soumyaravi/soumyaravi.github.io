@@ -8,7 +8,7 @@ d3.csv("count_words.csv", function(data){
 	.filter(function (d){ return +d.count>0 ; })
 	.map(function(d){ return { text: d.language, size :d.count};})
 	.sort(function(a,b) { return d3.descending(a.size, b.size); })
-	.slice(0,100);
+	.slice(0,500);
 	
 var layout = d3.layout.cloud()
     .size([width, height])
