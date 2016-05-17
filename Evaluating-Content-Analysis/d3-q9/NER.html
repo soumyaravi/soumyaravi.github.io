@@ -48,6 +48,7 @@
     }
 
 </style>
+<h1>Maximal Joint Agreement between different Named Entity Recognition toolkits</h1>
 <svg class="chart"></svg>
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script>
@@ -88,7 +89,7 @@
 
     // Specify the chart area and dimensions
     var chart = d3.select(".chart")
-        .attr("width", spaceForLabels + chartWidth + spaceForLegend)
+        .attr("width", chartWidth + spaceForLegend)
         .attr("height", chartHeight);
 
     // Create bars
@@ -153,7 +154,7 @@
             var offset = -gapBetweenGroups / 2;
             var horz = spaceForLabels + chartWidth + 40 - legendRectSize;
             var vert = i * height - offset;
-            return 'translate(' + horz + ',' + vert + ')';
+            return 'translate(' + 0 + ',' + vert + ')';
         });
 
     legend.append('rect')
