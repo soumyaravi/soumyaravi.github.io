@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+body {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.dot {
+  stroke: #000;
+}
+
+.tooltip {
+  position: absolute;
+  width: 200px;
+  height: 28px;
+  pointer-events: none;
+}
+</style>
+<body>
+<script src="d3.min.js"></script>
+<script>
+var main = function(path){
+var margin = {top: 20, right: 20, bottom: 30, left: 40},
+    width = 960 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
+
+var x = d3.scale.linear()
+    .range([0, width]);
+
+var y = d3.scale.linear()
+    .range([height, 0]);
+
+var color = "#00f";
+    
+var max_color = "#f00";
+    var min_color = "#0f0";
+
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom");
+
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left");
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    // add the tooltip area to the webpage
+var tooltip = d3.select("body").append("div")
+    .attr("class", "tooltip")
+    .style("opacity", 0);
+    
+d3.csv(path, function(error, data) {
+  if (error) throw error;
+
+  data.forEach(function(d) {
+    d.Score = +d.Score;
+    d.Count = +d.Count;
+  });
+
+  x.domain(d3.extent(data, function(d) { return d.Count; })).nice();
+  y.domain(d3.extent(data, function(d) { return d.Score; })).nice();
+var max = d3.max(data, function(d){ return d.Score;})
+var min = d3.min(data, function(d){ return d.Score;})    
+  
+  svg.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(xAxis)
+    .append("text")
+      .attr("class", "label")
+      .attr("x", width)
+      .attr("y", -6)
+      .style("text-anchor", "end")
+      .text("Products");
+
+  svg.append("g")
+      .attr("class", "y axis")
+      .call(yAxis)
+    .append("text")
+      .attr("class", "label")
+      .attr("transform", "rotate(-90)")
+      .attr("y", -36)
+      .attr("dy", ".71em")
+      .style("text-anchor", "end")
+      .text("Score")
+
+  svg.selectAll(".dot")
+      .data(data)
+    .enter().append("circle")
+      .attr("class", "dot")
+      .attr("r", 3.5)
+      .attr("cx", function(d) { return x(d.Count); })
+      .attr("cy", function(d) { return y(d.Score); })
+      .style("fill", function(d){
+          return color;
+  })
+  .on('mouseover', function (d) {
+             tooltip.style("opacity", 0.8)
+	    .style('position', 'absolute')
+            .style("left", (d3.event.pageX + 35) + 'px')
+            .style("top", (d3.event.pageY + 30) + 'px')
+            .html("<b>Product ID: "+d.ProductID+"<br>Score: "+d.Score + "</b>");
+  });;
+     
+  /*var legend = svg.selectAll(".legend")
+      .data(color.domain())
+    .enter().append("g")
+      .attr("class", "legend")
+      .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+
+  legend.append("rect")
+      .attr("x", width - 18)
+      .attr("width", 18)
+      .attr("height", 18)
+      .attr("height", 18)
+      .style("fill", color);
+
+  legend.append("text")
+      .attr("x", width - 24)
+      .attr("y", 9)
+      .attr("dy", ".35em")
+      .style("text-anchor", "end")
+      .text(function(d) { return d; });*/
+
+});
+}/*
+    var QueryString = function () {
+    var query_string = {};
+    var query = window.location.search.substring(1);
+    var vars = query.split("&");
+    for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split("=");
+        if (typeof query_string[pair[0]] === "undefined") {
+            query_string[pair[0]] = decodeURIComponent(pair[1]);
+        } else if (typeof query_string[pair[0]] === "string") {
+            var a = [query_string[pair[0]], decodeURIComponent(pair[1])];
+            query_string[pair[0]] = a;
+        } else {
+            query_string[pair[0]].push(decodeURIComponent(pair[1]));
+        }
+    }
+    return query_string;
+}();
+    */
+    window.onload = function() {
+
+           // var mime =  QueryString.mime;
+            path = "helpful-scores.csv";
+            console.log("PATH: " + path);
+            main(path);
+    }
+</script>

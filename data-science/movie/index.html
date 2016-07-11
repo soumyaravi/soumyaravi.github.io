@@ -1,0 +1,72 @@
+<html>
+<head>
+    <Title>D3 visualizations for Movie Reviews</Title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> 
+    <style>
+        h1{
+            text-align: center;
+        }
+        body{
+            background-color: whitesmoke;
+        }
+        .tabcolor a:link{
+    background-color: #FFFFFF;
+}
+    </style>
+    <script>
+    $().ready(function() {
+            $("#mime").on("change", function(e) {
+
+                var mime = $(this).val(),
+                    url = "/Evaluating-Content-Analysis/"+mime+".html";
+                $("iframe").attr("src", url);
+                console.log("url"+url);
+                console.log("mime"+mime);
+            });
+         });
+    </script>
+    </head>
+    <body>
+		 <div class="container" id="data-info">
+      <!-- Nav tabs -->
+      <ul class="nav nav-pills tabcolor">
+		  <li class="active"><a data-toggle="pill" href="#review-count">Review Count</a></li>
+         <li><a data-toggle="pill" href="#user-count">User Count</a></li>
+         <li><a data-toggle="pill" href="#helpful-score" >Helpful Score</a></li>
+		  <li><a data-toggle="pill" href="#month-year">Month Year</a></li>
+         <li><a data-toggle="pill" href="#movie-score">Movie Score</a></li>
+         <li><a data-toggle="pill" href="#user-reviews">User Reviews</a></li>
+      </ul>
+      <!-- Tab panes -->
+      <div class="tab-content">
+		  <div class="tab-pane active" id="review-count">
+		  <iframe src="review-count.html" width="100%" height="100%" allowTransparency="true" frameborder="0">
+			</iframe>
+		  </div>
+		        <div class="tab-pane " id="user-count">
+		  <iframe src="user-count.html" width="100%" height="100%" allowTransparency="true" frameborder="0" >
+			</iframe>
+		  </div>
+      <div class="tab-pane" id="helpful-score">
+		  <iframe src="helpful-score.html" width="100%" height="100%" allowTransparency="true" frameborder="0">
+			</iframe>
+		  </div>
+		        <div class="tab-pane " id="month-year">
+		  <iframe src="month-year.html" width="100%" height="100%" allowTransparency="true" frameborder="0">
+			</iframe>
+		  </div>
+		        <div class="tab-pane " id="movie-score">
+		  <iframe src="movie-score.html" width="100%" height="100%" allowTransparency="true" frameborder="0">
+			</iframe>
+		  </div>
+		        <div class="tab-pane " id="user-reviews">
+		  <iframe src="user-reviews.html" width="100%" height="100%" allowTransparency="true" frameborder="0">
+			</iframe>
+		  </div>
+			 </div>
+		</div>
+
+    </body>
+</html>
