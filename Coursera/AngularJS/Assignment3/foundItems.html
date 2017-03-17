@@ -1,0 +1,9 @@
+<!--<p>-->
+    <ol>
+        <li ng-repeat="item in items.found track by $index">
+        <b>{{item.name}}</b> ({{item.short_name}}) <br> {{item.description}}
+            <button ng-click="items.onRemove({index: $index});">Don't want this one!</button>
+        </li>
+    </ol>
+
+<!--</p>-->
