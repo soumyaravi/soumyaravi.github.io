@@ -26,7 +26,7 @@
                 }
             })
             .state('items', {
-                url: '/items/{shortName}',
+                url: '/categories/{shortName}/items',
                 templateUrl: 'item-details.html',
                 controller: 'ItemsController as item',
                 resolve: {

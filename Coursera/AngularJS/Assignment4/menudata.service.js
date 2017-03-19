@@ -36,10 +36,10 @@
         service.getItemsForCategory = function (categoryShortName) {
             // show all menu items for given category
             var menuItems = [];
-            var shortName = categories[categoryShortName].short_name;
             var response = $http({
                 method:'GET',
-                url : (ApiBasePath + '/menu_items.json?category=' + shortName)
+                url : (ApiBasePath + '/menu_items.json'),
+                params: {category: categoryShortName}
             })
                 .then(function (result) {
                     var ans = result.data.menu_items;
