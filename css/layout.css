@@ -554,7 +554,7 @@ padding: 2% 2% 2% 2%;
 /* e. Portfolio Section
 /* ------------------------------------------------------------------ */
 .nav>li>a:hover{
-
+background-color: #0d0d0d;
 
 }
 #portfolio {
@@ -1030,6 +1030,7 @@ call-to-action .button {
 }
 #contact .contact-text >span{
    color: #7A7A7A;
+    font-size: 16px;
 }
 #contact span.required {
 	color: #11ABB0;
