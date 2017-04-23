@@ -36,7 +36,7 @@ header .banner {
 
 header .banner-text { width: 100%; }
 header .banner-text h2 {
-   font: 90px/1.1em 'opensans-bold', sans-serif;
+   font: 56px/1.1em 'opensans-bold', sans-serif;
    color: #fff;
    letter-spacing: -2px;
    margin: 0 auto 18px auto;
@@ -87,7 +87,6 @@ header .scrolldown a {
    width: 42px;
    font-size: 42px;
    line-height: 42px;
-   color: #fff;
    border-radius: 100%;
 
    -webkit-transition: all .3s ease-in-out;
@@ -152,6 +151,7 @@ ul#nav li a {
 	text-decoration: none;
    text-align: left;
    color: #fff;
+    /*background-color: #0d0d0d;*/
 
 	-webkit-transition: color .2s ease-in-out;
 	-moz-transition: color .2s ease-in-out;
@@ -553,7 +553,7 @@ padding: 2% 2% 2% 2%;
 /* ------------------------------------------------------------------ */
 /* e. Portfolio Section
 /* ------------------------------------------------------------------ */
-.nav>li>a:hover{
+.nav li a:focus, .nav li a:hover{
 background-color: #0d0d0d;
 
 }
