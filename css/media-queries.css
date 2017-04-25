@@ -233,17 +233,19 @@
 
    /* Call To Action Section
    /* ----------------------------------------------------------------- */
-   #call-to-action { text-align: center; }
-   #call-to-action h1 {
-      font: 16px/24px 'opensans-bold', sans-serif;
-      text-align: center;
-      margin-bottom: 30px;
-      text-shadow: 0px 1px 3px rgba(0, 0, 0, 1);
-   }
-   #call-to-action h1 span { display: block; }
-   #call-to-action .header-col h1:before { content: none; }
-   #call-to-action p { font-size: 15px; }
-
+   /*#call-to-action { text-align: center; }*/
+   /*#call-to-action h1 {*/
+      /*font: 16px/24px 'opensans-bold', sans-serif;*/
+      /*text-align: center;*/
+      /*margin-bottom: 30px;*/
+      /*text-shadow: 0px 1px 3px rgba(0, 0, 0, 1);*/
+   /*}*/
+   /*#call-to-action h1 span { display: block; }*/
+   /*#call-to-action .header-col h1:before { content: none; }*/
+   /*#call-to-action p { font-size: 15px; }*/
+    .header-col{
+        margin-bottom: 20px;
+    }
 
    /* Portfolio Section
    /* ----------------------------------------------------------------- */
