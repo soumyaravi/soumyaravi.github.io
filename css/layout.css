@@ -27,7 +27,7 @@ header:before {
 }
 header .banner {
    display: inline-block;
-   vertical-align: middle;
+   /*vertical-align: middle;*/
    margin: 0 auto;
    width: 85%;
    padding-bottom: 30px;
@@ -309,7 +309,7 @@ padding: 2% 2% 2% 2%;
 }
 
 #education .info {
-   font: 16px/24px 'librebaskerville-italic', serif;
+   font: 16px/26px 'opensans-regular', sans-serif;
    color: #6E7881;
    margin-bottom: 18px;
    margin-top: 9px;
@@ -319,7 +319,7 @@ padding: 2% 2% 2% 2%;
    margin-left: 5px;
 }
 #education .date {
-   font: 15px/24px 'opensans-regular', sans-serif;
+   font: 16px/26px 'opensans-regular', sans-serif;
    margin-top: 6px;
 }
 
@@ -797,8 +797,8 @@ call-to-action .button {
    overflow: hidden;
 }
 #skills .text-container {
-   padding-top: 96px;
-   padding-bottom: 66px;
+   padding-top: 10px;
+   padding-bottom: 10px;
 }
 #skills h1 {
    font: 18px/24px 'opensans-bold', sans-serif;   
