@@ -27,7 +27,16 @@
 /*----------------------------------------------------*/
 /* Highlight the current section in the navigation bar
 ------------------------------------------------------*/
-
+    var mobileView = function () {
+        if ($(window).width()<=767 && $(window).width()>=480){
+            // console.log("WIdth",$(window).width());
+            $('.skillsbutton div').addClass("mobile-view");
+        }
+        else {
+            $('.skillsbutton div').removeClass("mobile-view");
+        }
+    };
+    mobileView();
 	var sections = $("section");
 	var navigation_links = $("#nav-wrap a");
 
@@ -61,6 +70,8 @@
 
         $('header').css({ 'height': $(window).height() });
         $('body').css({ 'width': $(window).width() })
+       console.log("WIdth",$(window).width());
+	   mobileView()
    });
 
 

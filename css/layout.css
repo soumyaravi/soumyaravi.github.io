@@ -183,6 +183,18 @@ ul#nav li.current a { color: #F06000; }
 
 .skillsMargin{margin-top: 20px;}
 
+.skillsbutton ul{
+    list-style: none;
+    display: inline-block;
+}
+li.button{
+    border-radius: 3px;
+    padding: 5px 7px;
+}
+.skillsbutton ul li:hover{
+    box-shadow:  1px 2px 2px grey;
+    cursor: grab;
+}
 #skills {
    background: #fff;
    padding-top: 20px;
@@ -247,8 +259,8 @@ ul#nav li.current a { color: #F06000; }
    background: #444;
 }
 #about .download .button:hover {
-   background: #fff;
-   color: #2B2B2B;
+   background: #2B2B2B;
+   color: #f3f3f3;
 }
 #about .download .button i {
    margin-right: 15px;
@@ -368,6 +380,7 @@ padding: 2% 2% 2% 2%;
 #workExperience .date {
    font: 15px/24px 'opensans-regular', sans-serif;
    margin-top: 6px;
+    margin-left: 20px;
 }
 /*----------------------------------------------*/
 /*	Projects 
@@ -765,12 +778,6 @@ background-color: #0d0d0d;
    color: #636363;
    font-size: 17px;
 }
-/*#
-call-to-action .button {
-	color:#fff;
-   background: #0D0D0D;
-}
-*/
 #call-to-action .button:hover,
 #call-to-action .button:active {
    background: #FFFFFF;
@@ -785,21 +792,6 @@ call-to-action .button {
 /* g. skills
 /* ------------------------------------------------------------------ */
 
-#skills {
-   background: #FFFFFF url(../images/skills-bg.jpg) no-repeat center center;
-   background-size: cover !important;
-	-webkit-background-size: cover !important;
-   background-attachment: fixed;
-
-   position: relative;
-   min-height: 200px;
-   width: 100%;
-   overflow: hidden;
-}
-/*#skills .text-container {*/
-   /*padding-top: 10px;*/
-   /*padding-bottom: 10px;*/
-/*}*/
 #skills h1 {
    font: 18px/24px 'opensans-bold', sans-serif;   
    text-transform: uppercase;
