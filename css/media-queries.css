@@ -11,6 +11,9 @@
       letter-spacing: -1px;
       margin: 0 auto 12px auto;
    }
+    #workExperience .date{
+        float: right;
+    }
 
 }
 
@@ -55,15 +58,28 @@
    #resume h1 { font: 16px/24px 'opensans-bold', sans-serif; }
    #resume .main-col { padding-right: 5%; }   
 
-   /* Skills Section
+   /* Testimonials Section
    ------------------------------------------------------------------- */
-  
+   /*#testimonials .header-col h1:before {*/
+      /*font-size: 66px;*/
+      /*line-height: 66px;*/
+   /*}*/
+   /*#testimonials blockquote p {*/
+      /*font-size: 22px;*/
+      /*line-height: 46px;      */
+   /*}*/
+    #workExperience .date{
+        float: right;
+    }
    .skillsbutton{
       margin: 0 2%;
    }
    .skillsbutton ul{
       text-align: justify;
    }
+   /*.skillsbutton>h4{*/
+      /*text-align: center;*/
+   /*}*/
     /* Call to Action Section
    ------------------------------------------------------------------- */
    #call-to-action .header-col h1:before {
@@ -229,6 +245,18 @@
    .bars { width: 100%; }
 
 
+   /* Call To Action Section
+   /* ----------------------------------------------------------------- */
+   /*#call-to-action { text-align: center; }*/
+   /*#call-to-action h1 {*/
+      /*font: 16px/24px 'opensans-bold', sans-serif;*/
+      /*text-align: center;*/
+      /*margin-bottom: 30px;*/
+      /*text-shadow: 0px 1px 3px rgba(0, 0, 0, 1);*/
+   /*}*/
+   /*#call-to-action h1 span { display: block; }*/
+   /*#call-to-action .header-col h1:before { content: none; }*/
+   /*#call-to-action p { font-size: 15px; }*/
     .header-col{
         margin-bottom: 20px;
     }
@@ -238,8 +266,12 @@
    #portfolio-wrapper .columns { margin-bottom: 40px; }
    .popup-modal {	max-width: 85%; }
 
-
-   /* Skills Section
+    #workExperience .date{
+        /*float: left;*/
+        /*margin-bottom: 20px;*/
+        vertical-align: middle;
+    }
+   /* Testimonials Section
    ----------------------------------------------------------------------- */
    #skills .text-container { text-align: center; }
    .skilltitle{
@@ -252,6 +284,19 @@
        margin-top: 10px;
        margin-bottom: 10px;
    }
+   /*#testimonials h1 {*/
+      /*font: 16px/24px 'opensans-bold', sans-serif;*/
+      /*text-align: center;*/
+      /*margin-bottom: 30px;*/
+      /*text-shadow: 0px 1px 3px rgba(0, 0, 0, 1);*/
+   /*}*/
+   /*#testimonials h1 span { display: block; }*/
+   /*#testimonials .header-col h1:before { content: none; }*/
+   /*#testimonials blockquote { padding-bottom: 24px; }*/
+   /*#testimonials blockquote p {*/
+      /*font-size: 20px;*/
+      /*line-height: 42px;      */
+   /*}*/
 
    /* Control Nav */
    .flex-control-nav {

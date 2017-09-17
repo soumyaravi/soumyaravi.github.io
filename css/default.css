@@ -702,7 +702,7 @@ properly.
 @media only screen and (max-width: 767px) {
 
    .row {
-	   width: 460px;
+	   /*width: 460px;*/
 	   margin: 0 auto;
       padding: 0;
 	}

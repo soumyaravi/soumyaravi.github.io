@@ -188,6 +188,13 @@ ul#nav li.current a { color: #F06000; }
     display: inline-block;
 }
 li.button{
+    /*border: 1px solid darkgray;*/
+    /*background-color: darkgray;*/
+    /*color: black;*/
+    /*background: -webkit-linear-gradient(darkgray, whitesmoke); !* For Safari 5.1 to 6.0 *!*/
+    /*background: -o-linear-gradient(darkgray, whitesmoke); !* For Opera 11.1 to 12.0 *!*/
+    /*background: -moz-linear-gradient(darkgray, whitesmoke); !* For Firefox 3.6 to 15 *!*/
+    /*background: linear-gradient(darkgray, whitesmoke);*/
     border-radius: 3px;
     padding: 5px 7px;
 }
@@ -380,7 +387,6 @@ padding: 2% 2% 2% 2%;
 #workExperience .date {
    font: 15px/24px 'opensans-regular', sans-serif;
    margin-top: 6px;
-    margin-left: 20px;
 }
 /*----------------------------------------------*/
 /*	Projects 
@@ -390,7 +396,9 @@ padding: 2% 2% 2% 2%;
    background: #f3f3f3;
    overflow: hidden;
 }
-
+img {
+    pointer-events: none;
+}
 #project a, #project a:visited  { color: #11ABB0; }
 #project a:hover, #project a:focus { color: #313131; }
 
@@ -778,6 +786,12 @@ background-color: #0d0d0d;
    color: #636363;
    font-size: 17px;
 }
+/*#
+call-to-action .button {
+	color:#fff;
+   background: #0D0D0D;
+}
+*/
 #call-to-action .button:hover,
 #call-to-action .button:active {
    background: #FFFFFF;
@@ -792,6 +806,21 @@ background-color: #0d0d0d;
 /* g. skills
 /* ------------------------------------------------------------------ */
 
+/*#skills {*/
+   /*!*background: #FFFFFF url(../images/skills-bg.jpg) no-repeat center center;*!*/
+   /*!*background-size: cover !important;*!*/
+	/*!*-webkit-background-size: cover !important;*!*/
+   /*!*background-attachment: fixed;*!*/
+
+   /*position: relative;*/
+   /*min-height: 200px;*/
+   /*width: 100%;*/
+   /*overflow: hidden;*/
+/*}*/
+/*#skills .text-container {*/
+   /*padding-top: 10px;*/
+   /*padding-bottom: 10px;*/
+/*}*/
 #skills h1 {
    font: 18px/24px 'opensans-bold', sans-serif;   
    text-transform: uppercase;
